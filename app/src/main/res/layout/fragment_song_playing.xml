@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/white"
+    tools:context=".fragments.SongPlayingFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/songImg"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/cover_img"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="5"
+            app:civ_shadow_color="#8BC34A"/>
+        <TextView
+            android:id="@+id/songTextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Song Name"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:id="@+id/songArtistLabel"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Artist Name"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/leftTime"
+                android:layout_below="@+id/seekBar"
+                android:text="00:00"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/rightTime"
+                android:layout_below="@+id/seekBar"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:text="04:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/seekBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/icon_pause"
+                />
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_marginTop="34dp"
+                android:layout_below="@+id/seekBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_next"
+                android:layout_toRightOf="@+id/btnPause"
+                />
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_marginTop="34dp"
+                android:layout_width="40dp"
+                android:layout_below="@+id/seekBar"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_previous"
+                android:layout_toLeftOf="@+id/btnPause"
+                />
+
+            <ImageButton
+                android:id="@+id/button_favorite"
+                android:layout_below="@+id/seekBar"
+                android:layout_marginTop="36dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/button_favorite"
+                android:layout_toRightOf="@+id/btnNext"
+                android:layout_marginLeft="30dp" />
+
+            <ImageButton
+                android:id="@+id/shuffle_favorite"
+                android:layout_below="@+id/seekBar"
+                android:layout_marginTop="36dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/baseline_shuffle_black_48"
+                android:checked="false"
+                android:layout_toLeftOf="@+id/btnPrevious"
+                android:layout_marginRight="30dp"
+                android:text=""
+                android:textOff=""
+                android:textOn=""/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

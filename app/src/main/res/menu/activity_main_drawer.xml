@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_allsongs"
+            android:icon="@drawable/navigation_allsongs"
+            android:title="All Songs"/>
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/navigation_favorites"
+            android:title="Favorites"/>
+
+        <item
+            android:id="@+id/audd"
+            android:title="Muzix Voice"
+            android:icon="@drawable/mic_gr">
+        </item>
+
+        <item
+            android:id="@+id/muzlyrics"
+            android:title="Muzix Lyrics"
+            android:icon="@drawable/lyrics"
+            />
+
+        <item
+            android:id="@+id/savedLyrics"
+            android:title="Saved Lyrics"
+            android:icon="@android:drawable/stat_sys_download"
+            />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/navigation_settings"
+            android:title="Settings"/>
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/navigation_aboutus"
+            android:title="About Us"/>
+    </group>
+
+</menu>

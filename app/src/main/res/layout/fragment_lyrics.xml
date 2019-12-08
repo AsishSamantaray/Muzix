@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#FFFFFF">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:id="@+id/text_input_layout"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyricshere"
+            android:hint="Artist with name of the song or lyrics"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/search_for"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_input_layout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/searchmusic"
+        />
+
+
+
+</RelativeLayout>
